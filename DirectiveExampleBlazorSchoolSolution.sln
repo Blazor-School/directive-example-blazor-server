@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectiveExampleBlazorSchool", "DirectiveExampleBlazorSchool\DirectiveExampleBlazorSchool.csproj", "{3F9E6B65-85BD-4EE0-963B-9BB41DC26C88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectiveExampleBlazorSchool", "DirectiveExampleBlazorSchool\DirectiveExampleBlazorSchool.csproj", "{3F9E6B65-85BD-4EE0-963B-9BB41DC26C88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,32 @@
+﻿@inject IJSRuntime JSRuntime
+@page "/on-event"
+
+<h3>@@on&lt;event&gt;</h3>
+<span>Example input event:</span>
+<div>
+    <input @oninput="(e) => OnInput(e)" @onkeydown="() => OnKeyDown(Random.Next(0,100))" />
+    <span>Last pressed key: @LastKey</span>
+    <span>Custom Parameter: @CustomParameter</span>
+</div>
+<button @onclick="OnClick">Click me</button>
+
+@code {
+    private char LastKey;
+    private int CustomParameter;
+    private Random Random = new();
+
+    private void OnInput(ChangeEventArgs eventArgs)
+    {
+        LastKey = eventArgs.Value.ToString().LastOrDefault();
+    }
+
+    private void OnKeyDown(int parameter)
+    {
+        CustomParameter = parameter;
+    }
+
+    private async void OnClick()
+    {
+        await JSRuntime.InvokeVoidAsync("alert", "Blazor School https://blazorschool.com");
+    }
+}
